@@ -38,15 +38,12 @@ export default function Navbar() {
         <div
           className={`flex items-center justify-between h-14 px-5 rounded-2xl transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-xl border border-border/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)]" : "bg-transparent"}`}
         >
-          {/* Logo */}
           <Link to="/" className="flex items-center group">
-            {/* Light mode logo */}
             <img
               src="/abflow_logo_light.png"
               alt="ABFlow"
               className="h-9 w-auto object-contain group-hover:opacity-90 transition-opacity block dark:hidden"
             />
-            {/* Dark mode logo */}
             <img
               src="/abflow_logo_dark.svg"
               alt="ABFlow"
@@ -54,7 +51,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
             <Link
               to="/"
@@ -65,7 +61,6 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Right side */}
           <div className="hidden md:flex items-center gap-3">
             <div className="flex items-center gap-1 bg-secondary/30 p-1 rounded-full border border-border/40">
               <button
@@ -119,13 +114,13 @@ export default function Navbar() {
                     )}
                   </div>
                   <span className="text-sm font-medium text-foreground pr-2">
-                    {user?.name || "User"}
+                    {user?.name || t("nav.user_placeholder")}
                   </span>
                 </div>
                 <button
                   onClick={logout}
                   className="flex items-center justify-center w-8 h-8 rounded-full text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors"
-                  title="Logout"
+                  title={t("nav.logout")}
                 >
                   <LogOut className="w-3.5 h-3.5" />
                 </button>
@@ -133,7 +128,6 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Mobile toggle */}
           {mobileOpen ? (
             <button
               className="md:hidden p-2 text-foreground rounded-full hover:bg-secondary/80 bg-secondary/50 transition-colors"
@@ -152,7 +146,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -184,11 +177,11 @@ export default function Navbar() {
                 >
                   {theme === "dark" ? (
                     <>
-                      <Sun className="w-4 h-4" /> Light
+                      <Sun className="w-4 h-4" /> {t("nav.theme_light")}
                     </>
                   ) : (
                     <>
-                      <Moon className="w-4 h-4" /> Dark
+                      <Moon className="w-4 h-4" /> {t("nav.theme_dark")}
                     </>
                   )}
                 </button>
@@ -223,7 +216,7 @@ export default function Navbar() {
                         )}
                       </div>
                       <span className="font-medium text-foreground">
-                        {user?.name || "User"}
+                        {user?.name || t("nav.user_placeholder")}
                       </span>
                     </div>
                     <button
@@ -245,3 +238,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

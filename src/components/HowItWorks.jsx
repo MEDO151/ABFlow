@@ -10,7 +10,6 @@ export default function HowItWorks() {
 
   return (
     <section className="py-28 relative overflow-hidden">
-      {/* Subtle gradient background */}
       <div
         className="absolute inset-0 -z-10"
         style={{ background: "var(--gradient-subtle)" }}
@@ -23,7 +22,9 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-20"
         >
-          <span className="section-label mb-4 inline-flex">How It Works</span>
+          <span className="section-label mb-4 inline-flex">
+            {t("how_it_works.title")}
+          </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5">
             {t("how_it_works.title")}
           </h2>
@@ -33,7 +34,6 @@ export default function HowItWorks() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
-          {/* Connector line */}
           <div className="hidden md:block absolute top-12 left-[20%] right-[20%] h-px bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20" />
 
           {stepKeys.map((key, i) => {
@@ -52,13 +52,10 @@ export default function HowItWorks() {
                 className="text-center relative"
               >
                 <div className="relative mx-auto mb-8 w-24 h-24">
-                  {/* Outer ring */}
                   <div className="absolute inset-0 rounded-full border-2 border-primary/10" />
-                  {/* Inner circle */}
                   <div className="absolute inset-2 rounded-full bg-card border border-border/50 flex items-center justify-center shadow-sm">
                     <Icon className="w-7 h-7 text-primary" />
                   </div>
-                  {/* Step number badge */}
                   <div className="absolute -top-1 -right-1 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold font-display shadow-md">
                     {i + 1}
                   </div>
@@ -77,3 +74,4 @@ export default function HowItWorks() {
     </section>
   );
 }
+

@@ -37,7 +37,9 @@ export default function FeaturesSection() {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="section-label mb-4 inline-flex">Features</span>
+          <span className="section-label mb-4 inline-flex">
+            {t("nav.features")}
+          </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5">
             {t("features.title")}
           </h2>
@@ -78,3 +80,4 @@ export default function FeaturesSection() {
     </section>
   );
 }
+

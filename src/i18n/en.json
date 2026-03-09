@@ -5,13 +5,32 @@
     "pricing": "Pricing",
     "login": "Login",
     "register": "Register",
-    "logo": "ABFlow"
+    "logo": "ABFlow",
+    "theme_light": "Light",
+    "theme_dark": "Dark",
+    "user_placeholder": "User",
+    "logout": "Logout"
   },
   "hero": {
     "title": "Optimize Your Website with Powerful A/B Testing",
     "subtitle": "Run experiments, analyze results, and boost conversions with our enterprise-grade experimentation platform. Make data-driven decisions that drive real growth.",
     "cta_primary": "Start Experimenting",
-    "cta_secondary": "View Dashboard"
+    "cta_secondary": "View Dashboard",
+    "badge": "Now with AI-powered insights",
+    "stats": {
+      "experiments": "10K+ experiments run",
+      "uptime": "99.9% uptime",
+      "compliance": "SOC 2 Compliant"
+    },
+    "mockup": {
+      "conversion_rate": "Conversion Rate",
+      "active_tests": "Active Tests",
+      "total_visitors": "Total Visitors"
+    }
+  },
+  "common": {
+    "welcome": "Welcome",
+    "start_building": "Start building your amazing project here!"
   },
   "features": {
     "title": "Everything You Need to Experiment",
@@ -101,6 +120,7 @@
   "testimonials": {
     "title": "Trusted by Data-Driven Teams",
     "subtitle": "See how leading companies optimize their digital experiences.",
+    "label": "Testimonials",
     "items": [
       {
         "quote": "We increased our conversion rate by 34% in just 3 months using ABFlow. The real-time analytics made it easy to make fast, confident decisions.",
@@ -139,12 +159,15 @@
     "guides": "Guides",
     "community": "Community",
     "copyright": "© 2026 ABFlow. All rights reserved.",
-    "description": "The modern experimentation platform for data-driven teams."
+    "description": "The modern experimentation platform for data-driven teams.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
   },
   "login": {
     "title": "Welcome Back",
     "subtitle": "Sign in to your account to continue",
     "email": "Email Address",
+    "email_placeholder": "you@company.com",
     "password": "Password",
     "remember": "Remember me",
     "forgot": "Forgot Password?",
@@ -156,7 +179,9 @@
     "title": "Create Your Account",
     "subtitle": "Start optimizing your website today",
     "name": "Full Name",
+    "name_placeholder": "John Doe",
     "email": "Email Address",
+    "email_placeholder": "you@company.com",
     "password": "Password",
     "confirm_password": "Confirm Password",
     "submit": "Create Account",
@@ -168,5 +193,10 @@
     "email_invalid": "Please enter a valid email",
     "password_min": "Password must be at least 8 characters",
     "passwords_mismatch": "Passwords do not match"
+  },
+  "not_found": {
+    "title": "404",
+    "subtitle": "Oops! Page not found",
+    "back_home": "Return to Home"
   }
 }

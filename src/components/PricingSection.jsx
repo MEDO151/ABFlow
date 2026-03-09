@@ -16,7 +16,9 @@ export default function PricingSection() {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="section-label mb-4 inline-flex">Pricing</span>
+          <span className="section-label mb-4 inline-flex">
+            {t("nav.pricing")}
+          </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5">
             {t("pricing.title")}
           </h2>
@@ -96,3 +98,4 @@ export default function PricingSection() {
     </section>
   );
 }
+

@@ -15,13 +15,11 @@ const App = () => {
         <LanguageProvider>
           <BrowserRouter>
             <Routes>
-              {/* Public/Shared routes with Navbar/Footer */}
               <Route element={<MainLayout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
 
-              {/* Authentication routes (NO Navbar/Footer) */}
               <Route element={<AuthLayout />}>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
@@ -35,3 +33,4 @@ const App = () => {
 };
 
 export default App;
+

@@ -20,7 +20,9 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="section-label mb-4 inline-flex">Testimonials</span>
+          <span className="section-label mb-4 inline-flex">
+            {t("testimonials.label")}
+          </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5">
             {t("testimonials.title")}
           </h2>
@@ -44,7 +46,6 @@ export default function TestimonialsSection() {
                 }}
                 className="card-glass p-7"
               >
-                {/* Stars */}
                 <div className="flex gap-1 mb-5">
                   {Array.from({ length: 5 }).map((_, si) => (
                     <Star
@@ -76,3 +77,4 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+

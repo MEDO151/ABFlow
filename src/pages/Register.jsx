@@ -55,13 +55,11 @@ export default function Register() {
           <div className="card-glass p-8 sm:p-10 rounded-2xl">
             <div className="flex justify-center mb-6">
               <Link to="/">
-                {/* Light mode logo */}
                 <img
                   src="/abflow_logo_light.png"
                   alt="ABFlow"
                   className="h-10 w-auto object-contain block dark:hidden"
                 />
-                {/* Dark mode logo */}
                 <img
                   src="/abflow_logo_dark.svg"
                   alt="ABFlow"
@@ -90,7 +88,7 @@ export default function Register() {
                     value={form.name}
                     onChange={(e) => onChange("name", e.target.value)}
                     className={inputClass}
-                    placeholder="John Doe"
+                    placeholder={t("register.name_placeholder")}
                   />
                 </div>
                 {errors.name && (
@@ -111,7 +109,7 @@ export default function Register() {
                     value={form.email}
                     onChange={(e) => onChange("email", e.target.value)}
                     className={inputClass}
-                    placeholder="you@company.com"
+                    placeholder={t("register.email_placeholder")}
                   />
                 </div>
                 {errors.email && (
@@ -200,3 +198,4 @@ export default function Register() {
     </div>
   );
 }
+

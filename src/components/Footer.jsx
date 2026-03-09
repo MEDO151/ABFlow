@@ -43,22 +43,17 @@ export default function Footer() {
 
   return (
     <footer className="relative border-t border-border/40">
-      {/* Subtle top gradient */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        {/* Top section: brand + link columns */}
         <div className="flex flex-col gap-10 md:grid md:grid-cols-5 md:gap-8">
-          {/* Brand block */}
           <div className="md:col-span-2 md:pr-8">
             <Link to="/" className="inline-flex items-center group">
-              {/* Light mode logo */}
               <img
                 src="/abflow_logo_light.png"
                 alt="ABFlow"
                 className="h-9 w-auto object-contain group-hover:opacity-90 transition-opacity block dark:hidden"
               />
-              {/* Dark mode logo */}
               <img
                 src="/abflow_logo_dark.svg"
                 alt="ABFlow"
@@ -82,7 +77,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link columns — 2-col grid on mobile, each col on md+ */}
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:contents">
             {columns.map((col) => (
               <div key={col.title}>
@@ -106,7 +100,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 mt-12 sm:mt-16 pt-8 border-t border-border/40 text-sm text-muted-foreground">
           <p className="text-center sm:text-left">{t("footer.copyright")}</p>
           <div className="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
@@ -114,13 +107,13 @@ export default function Footer() {
               href="#"
               className="hover:text-foreground transition-colors whitespace-nowrap"
             >
-              Privacy Policy
+              {t("footer.privacy")}
             </a>
             <a
               href="#"
               className="hover:text-foreground transition-colors whitespace-nowrap"
             >
-              Terms of Service
+              {t("footer.terms")}
             </a>
           </div>
         </div>
@@ -128,3 +121,4 @@ export default function Footer() {
     </footer>
   );
 }
+

@@ -8,10 +8,6 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden mesh-bg">
-      {/* Animated grid background */}
-      <div className="absolute inset-0 -z-10 grid-pattern opacity-40" />
-
-      {/* Floating orbs */}
       <div className="absolute top-1/3 left-[10%] w-72 h-72 bg-primary/10 rounded-full blur-[100px] floating" />
       <div className="absolute bottom-1/4 right-[15%] w-64 h-64 bg-accent/10 rounded-full blur-[100px] floating-delayed" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
@@ -25,7 +21,7 @@ export default function HeroSection() {
           >
             <div className="section-label mb-8 mx-auto w-fit">
               <Sparkles className="w-3.5 h-3.5" />
-              Now with AI-powered insights
+              {t("hero.badge")}
             </div>
 
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] text-foreground mb-6">
@@ -58,29 +54,22 @@ export default function HeroSection() {
               </Link>
             </div>
 
-            {/* Trust bar */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground"
-            >
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-accent" />
-                10K+ experiments run
+                {t("hero.stats.experiments")}
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-primary" />
-                99.9% uptime
+                {t("hero.stats.uptime")}
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-accent" />
-                SOC 2 Compliant
+                {t("hero.stats.compliance")}
               </span>
-            </motion.div>
+            </div>
           </motion.div>
 
-          {/* Dashboard mockup */}
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
@@ -89,7 +78,6 @@ export default function HeroSection() {
           >
             <div className="card-glass p-2 sm:p-3 rounded-2xl border border-border/40">
               <div className="bg-secondary/80 rounded-xl p-4 sm:p-6 overflow-hidden">
-                {/* Browser chrome */}
                 <div className="flex items-center gap-2 mb-5">
                   <div className="flex gap-1.5">
                     <div className="w-3 h-3 rounded-full bg-destructive/70" />
@@ -99,21 +87,20 @@ export default function HeroSection() {
                   <div className="flex-1 h-7 rounded-lg bg-muted/60 mx-8" />
                 </div>
 
-                {/* Stats row */}
                 <div className="grid grid-cols-3 gap-3 mb-4">
                   {[
                     {
-                      label: "Conversion Rate",
+                      label: t("hero.mockup.conversion_rate"),
                       value: "+34.2%",
                       color: "text-accent",
                     },
                     {
-                      label: "Active Tests",
+                      label: t("hero.mockup.active_tests"),
                       value: "12",
                       color: "text-primary",
                     },
                     {
-                      label: "Total Visitors",
+                      label: t("hero.mockup.total_visitors"),
                       value: "84.3K",
                       color: "text-foreground",
                     },
@@ -134,7 +121,6 @@ export default function HeroSection() {
                   ))}
                 </div>
 
-                {/* Chart bars */}
                 <div className="bg-card/60 rounded-xl p-4 border border-border/30">
                   <div className="flex items-end gap-2 h-24">
                     {Array.from({ length: 12 }).map((_, i) => {
@@ -160,7 +146,6 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Glow behind dashboard */}
             <div
               className="absolute -inset-8 -z-10 rounded-3xl"
               style={{
@@ -174,3 +159,4 @@ export default function HeroSection() {
     </section>
   );
 }
+
